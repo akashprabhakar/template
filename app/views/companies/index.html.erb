@@ -1,1 +1,16 @@
 <h1>Companies</h1>
+<h4> List of all the companies. </h4>
+<table class="table table-bordered table-hover">
+	<tbody>
+		<tr >
+			<th style="text-align:center"> Company </th>
+		</tr>
+		
+			<% @companies.each do |company| %>
+			<tr>
+				<td><%= link_to company,company %></td>
+			</tr>
+			<% end %>
+		</tr>
+	</tbody>
+</table>

@@ -1,1 +1,25 @@
 <h1>Reports</h1>
+<h4> List of all the reports. </h4>
+<table class="table table-bordered table-hover">
+	<tbody>
+		<tr>
+			<th> View </th>
+			<th> User </th>
+			<th> Project </th>
+			<th> Date/Time </th>
+			<th> Hours </th>
+		</tr>
+		
+		<% @reports.each do |report| %>
+		<tr>
+			<td><%= link_to 'View', report %></td>
+			<td><%= report.user %></td>
+			<td><%= link_to report.project, report.project %></td>
+			<td><%= report.datetimeperformed.strftime('%d/%m/%Y %H:%M') %></td>
+			<td><%= report.hours %></td>
+	
+		</tr>
+			<% end %>
+		
+	</tbody>
+</table>

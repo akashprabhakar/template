@@ -1,0 +1,7 @@
+<h1><%= @report.datetimeperformed %></h1>
+
+<p> User : <%= @report.user.fname %> <%= @report.user.lname %></p>
+<p>Project : <%= @report.project.name %></p>
+<p>Hours : <%= @report.hours %></p>
+
+<%= link_to 'All Reports',reports_path %>

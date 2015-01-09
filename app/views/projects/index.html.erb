@@ -1,1 +1,18 @@
 <h1>Projects</h1>
+<h4> List of all the projects. </h4>
+<table class="table table-bordered table-hover">
+	<tbody>
+		<tr>
+			<th class="tab_head"> Projects </th>
+			<th style="text-align:center"> Company </th>
+		</tr>
+		
+			<% @projects.each do |project| %>
+			<tr>
+				<td><%= link_to project,project %></td>
+				<td><%= link_to project.company,project.company %></td>
+			</tr>
+			<% end %>
+		</tr>
+	</tbody>
+</table>

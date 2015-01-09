@@ -48,18 +48,10 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                       <%= link_to '<i class="fa fa-fw fa-bar-chart-o"></i>                          Home'.html_safe,root_path %>
-                    </li>
-                    <li>
-                        <%= link_to '<i class="fa fa-fw fa-bar-chart-o"></i>Companies'.html_safe,companies_path %>
-                    </li>
-                    <li>
-                         <%= link_to '<i class="fa fa-fw fa-table"></i>Projects'.html_safe,projects_path %>
-                    </li>
-                    <li>
-                       <%= link_to ' <i class="fa fa-fw fa-edit"></i>Reports'.html_safe,reports_path %>
-                    </li>
+                    <% nav_items.each do |nav_item| %>
+                    <%= display_nav_item(nav_item[:displaytext], nav_item[:controllername], nav_item[:linkurl]) %>
+                <% end %>
+
                    
                 </ul>
             </div>
